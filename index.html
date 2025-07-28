@@ -18,6 +18,39 @@
 
 	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
+	
+	<script>
+		// Anti-scraping protection for contact info and download button
+		function revealContact() {
+			// Decode phone number
+			const phoneEl = document.getElementById('phone-link');
+			if (phoneEl) {
+				const phone = '718' + '-576' + '-5282';
+				phoneEl.href = 'tel:1' + phone.replace(/-/g, '');
+				phoneEl.textContent = phone;
+			}
+			
+			// Decode email
+			const emailEl = document.getElementById('email-link');
+			if (emailEl) {
+				const user = 'lindita' + 'kalaj';
+				const domain = 'gmail' + '.' + 'com';
+				const email = user + '@' + domain;
+				emailEl.href = 'mailto:' + email;
+				emailEl.textContent = email;
+			}
+			
+			// Decode resume download link
+			const resumeEl = document.getElementById('resume-download');
+			if (resumeEl) {
+				const path = 'assets' + '/' + 'resume' + '/' + 'Lindita Kalaj - Resume.pdf';
+				resumeEl.href = path;
+			}
+		}
+		
+		// Reveal contact info when page loads
+		document.addEventListener('DOMContentLoaded', revealContact);
+	</script>
 </head>
 <body>
 	<div class="main-wrapper">
@@ -34,10 +67,9 @@
 						<div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
 							<ul class="list-unstyled mb-0">
 								<li class="mb-2"><i class="fas fa-phone-square fa-fw fa-lg me-2 "></i><a
-										class="resume-link" href="tel:17185765282">718-576-5282</a></li>
+										class="resume-link" href="#" id="phone-link">Click to reveal</a></li>
 								<li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg me-2"></i><a
-										class="resume-link"
-										href="mailto:linditakalaj@gmail.com">linditakalaj@gmail.com</a></li>
+										class="resume-link" href="#" id="email-link">Click to reveal</a></li>
 								<!-- <li class="mb-2"><i class="fas fa-globe fa-fw fa-lg me-2"></i><a class="resume-link" href="#">linditakalaj.com</a></li> -->
 								<li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>New York, NY</li>
 							</ul>
@@ -57,7 +89,11 @@
 						</div>
 
 						<div class="col text-start">
-							<p class="mb-0">New graduate in software engineering looking to make an impact on the world. Passionate about modern technologies and applying them to real world problems. Enjoys team-building and collaboration in a positive working environment. Always learning all things software and tech to solve problems with creative people.</p>
+							<p class="mb-0">Software engineer with hands-on experience leveraging modern technologies to solve real-world problems.
+Proven track record of driving cross-functional collaboration and delivering scalable, high-impact solutions in
+fast-paced environments. Continuously learning all things software and tech to solve problems with creative
+people.
+</p>
 						</div>
 						<!--//col-->
 					</div>
@@ -67,25 +103,88 @@
 				<div class="resume-body">
 					<div class="row">
 						<div class="resume-main col-12 col-lg-8 col-xl-9   pe-0   pe-lg-5">
-							<section class="education-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Education</h3>
+							<section class="work-section py-3">
+								<h3 class="text-uppercase resume-section-heading mb-4">Work Experiences</h3>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">B.A. in Computer Science | Honors | Deanʼs List | GPA 3.83</h4>
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Kinary, Inc. | Backend Software Engineer - Part-time</h4>
 										<div
 											class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
-											CUNY - Queens College | 2022
+											April 2025 - Present
 										</div>
 									</div>
 									<div class="item-content">
 										<ul class="resume-list">
-											<li><b>Relevant Courses:</b> Internet and Web Technologies, Data Structures, Analysis Of Algorithms, Databases, Cloud Computing, Theory of Computation, Object Oriented Programming</li>
+											<li>Engineered a real-time transcription and summarization system for 60 minute meetings using Whisper and Llama 3 leveraging token chunking and speaker diarization.</li>
+											<li>RAG pipeline using OpenAI embeddings, OpenSearch vector indices enabling real-time semantic search and retrieval for context-aware LLM prompts.</li>
+											<li>Headless automation bot using Puppeteer and Selenium to join scheduled Google Meet sessions, detect active speakers, and record audio streams.</li>
+										</ul>
+									</div>
+								</div>
+								<!--//item-->
+								<div class="item mb-3">
+									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">eDigital | Backend Python Developer</h4>
+										<div
+											class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
+											June 2023 - February 2025
+										</div>
+									</div>
+									<div class="item-content">
+										<ul class="resume-list">
+											<li>Improved web app performance by enabling text compression through Brotli and React Lazy Load, increasing Google Lighthouse performance by 132%.</li>
+											<li>Built a bespoke analytics system to track user interactions throughout the application.</li>
+											<li>Engineered a screen detection system leveraging a YOLO (You Only Look Once) model that powered a smart agent capable of navigating TV interfaces autonomously, increasing testing efficiency and reducing manual QA cycles by 60%.</li>
+											<li>Deployed distributed IoT agents on Raspberry Pis with integrated cameras, creating a scalable local testbed for automated screen interaction.</li>
+											<li>Built an automation pipeline enabling AI agents to dynamically traverse multi-screen UI flows (home → menu → input → results → playback), cutting integration time by over 40%.</li>
+										</ul>
+									</div>
+								</div>
+								<!--//item-->
+								<div class="item mb-3">
+									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Girls Who Code | Mentor</h4>
+										<div
+											class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
+											Jan 2021 - May 2022
+										</div>
+									</div>
+									<div class="item-content">
+										<ul class="resume-list">
+											<li>Mentored 10 students individually, using effective troubleshooting skills to help them overcome challenges and improve their problem-solving abilities. As a result, there was an average improvement of 25% in their grades and an increase in their confidence and problem solving skills.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="item mb-3">
+									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">The Child School | Special Education Paraprofessional</h4>
+										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">Sep 2016 - May 2017</div>
+									</div>
+									<div class="item-content">
+										<ul class="resume-list">
+											<li>Provided students with 1:1 assistance in classroom instruction to maximize learning, achievement, and inclusion.</li>
+											<li>Defined specific curricular goals within the classroom to keep students motivated, engaged, and focused.</li>
+										</ul>
+									</div>
+								</div>
+								<!--//item-->
+								<div class="item mb-3">
+									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">J.P. Morgan Chase | Bank Teller</h4>
+										<div
+											class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
+											Aug 2012 - Sept 2014</div>
+									</div>
+									<div class="item-content">
+										<ul class="resume-list">
+											<li>Ensured compliance with banking policies and audit procedures; maintained and balanced cash drawers on a daily basis.</li>
+											<li>Responded to client inquiries and identified discrepancies to provide solutions leading to maximized customer satisfaction and value feedback.</li>
 										</ul>
 									</div>
 								</div>
 								<!--//item-->
 							</section>
-							<!--//education-section-->
+							<!--//work-section-->
 							<section class="project-section py-3">
 								<h3 class="text-uppercase resume-section-heading mb-4">Projects</h3>
 								<div class="item mb-3">
@@ -93,7 +192,7 @@
 										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Split Check</h4>
 										<div
 											class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
-											<a class="text-muted" href="https://play.google.com/store/apps/details?id=com.lindita.splitcheck">Demo</a></div>
+											<a class="text-muted" href="https://play.google.com/store/apps/details?id=com.mimo.splitcheck">Demo</a></div>
 											<i>An android app written in Java designed to split restaurant bills by items.</i>
 
 									</div>
@@ -141,79 +240,34 @@
 									</div>
 								</div>
 								<!--//item-->
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">PHP Web Parser</h4>
-										<div
-											class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
-											<a class="text-muted" href="https://linditakalaj.me/parse.html">Demo</a></div>
-											<i>A PHP page analyzing the frequency of letters & numbers in descending order.</i>
-
-									</div>
-									<div class="item-content">
-										<ul>
-											<li>Utilized media queries to apply customized styles for different media types and devices in the web design process</li>
-											<li>Implemented email service APIs for contact form submission</li>
-											<li>Created a LAMP-based website for improved performance and decreased downtime, as indicated by website analytics</li>
-										</ul>
-									</div>
-								</div>
-								<!--//item-->
 							</section>
 							<!--//project-section-->
-							<section class="work-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Work Experiences</h3>
+							<section class="education-section py-3">
+								<h3 class="text-uppercase resume-section-heading mb-4">Education</h3>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Mentor</h4>
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">B.A. in Computer Science | Honors | Deanʼs List | GPA 3.83</h4>
 										<div
 											class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
-											Girls Who Code | Jan 2021 - May 2022
+											CUNY - Queens College | 2022
 										</div>
 									</div>
 									<div class="item-content">
 										<ul class="resume-list">
-											<li>Mentored 10 students individually, using effective troubleshooting skills to help them overcome challenges and improve their problem-solving abilities. As a result, there was an average improvement of 25% in their grades and an increase in their confidence and problem solving skills</li>
-										</ul>
-									</div>
-								</div>
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Special Education Paraprofessional</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">The Child School | Sep 2016 - May 2017</div>
-									</div>
-									<div class="item-content">
-										<ul class="resume-list">
-											<li>Provided students with 1:1 assistance in classroom instruction to maximize learning, achievement, and inclusion</li>
-											<li>Defined specific curricular goals within the classroom to keep students motivated, engaged, and focused</li>
-										</ul>
-									</div>
-								</div>
-								<!--//item-->
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Bank Teller</h4>
-										<div
-											class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">
-											J.P. Morgan Chase | Aug 2012 - Sept 2014</div>
-									</div>
-									<div class="item-content">
-										<ul class="resume-list">
-											<li>Ensured compliance with banking policies and audit procedures; maintained and balanced cash drawers on a daily basis.</li>
-											<li>Responded to client inquiries and identified discrepancies to provide solutions leading to maximized customer satisfaction and value feedback.</li>
+											<li><b>Relevant Courses:</b> Internet and Web Technologies, Data Structures, Analysis Of Algorithms, Databases, Cloud Computing, Theory of Computation, Object Oriented Programming</li>
 										</ul>
 									</div>
 								</div>
 								<!--//item-->
 							</section>
-							<!--//work-section-->
+							<!--//education-section-->
 						</div>
 						<!--//resume-main-->
 						<aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
 							<section class="skills-section py-3">
 								<h3 class="text-uppercase resume-section-heading mb-4">Resume</h3>
 								<div class="item">
-									<a class="btn btn-primary me-2 mb-3" href="assets/resume/Lindita Kalaj - Resume.pdf"><svg
+									<a class="btn btn-primary me-2 mb-3" href="#" id="resume-download"><svg
 											class="svg-inline--fa fa-file-lines me-2" aria-hidden="true"
 											focusable="false" data-prefix="fas" data-icon="file-lines" role="img"
 											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
@@ -226,24 +280,65 @@
 								<!--//item-->
 								<h3 class="text-uppercase resume-section-heading mb-4">Skills</h3>
 								<div class="item">
-									<h4 class="item-title">Technical</h4>
+									<h4 class="item-title">Frontend</h4>
 									<ul class="list-unstyled resume-skills-list">
 										<li class="mb-2">HTML / CSS</li>
-										<li class="mb-2">Bootstrap / Tailwind</li>
-										<li class="mb-2">JavaScript / jQuery</li>
-										<li class="mb-2">React.js / Redux</li>
-										<li class="mb-2">Node.js / Next.js</li>
-										<li class="mb-2">Python / Flask / PHP</li>
-										<li class="mb-2">C++ / Java / Lisp</li>
-										<li class="mb-2">MySQL / PostgreSQL</li>
-										<li class="mb-2">Docker / Kubernetes</li>
-										<li class="mb-2">Unix / Linux</li>
-										<li class="mb-2">NumPy / TensorFlow</li>
-										<li class="mb-2">Android Development</li>
-										<li class="mb-2">Agile Development</li>
-										<li class="mb-2">Git</li>
+										<li class="mb-2">JavaScript</li>
+										<li class="mb-2">React.js</li>
+										<li class="mb-2">Next.js</li>
+										<li class="mb-2">Bootstrap</li>
+										<li class="mb-2">Tailwind</li>
+									</ul>
+								</div>
+								<!--//item-->
+								<div class="item">
+									<h4 class="item-title">Backend</h4>
+									<ul class="list-unstyled resume-skills-list">
+										<li class="mb-2">Python</li>
+										<li class="mb-2">Java</li>
+										<li class="mb-2">PHP</li>
+										<li class="mb-2">C++</li>
+										<li class="mb-2">Lisp</li>
+										<li class="mb-2">Bash</li>
+										<li class="mb-2">Node.js</li>
+										<li class="mb-2">Flask</li>
+										<li class="mb-2">PostgreSQL</li>
+										<li class="mb-2">MySQL</li>
+										<li class="mb-2">SQLite</li>
+										<li class="mb-2">OpenSearch</li>
+										<li class="mb-2">REST APIs</li>
+									</ul>
+								</div>
+								<!--//item-->
+								<div class="item">
+									<h4 class="item-title">AI/ML & Data Science</h4>
+									<ul class="list-unstyled resume-skills-list">
+										<li class="mb-2">NumPy</li>
+										<li class="mb-2">TensorFlow</li>
+										<li class="mb-2">LLMs (OpenAI, Anthropic, Gemini, LLaMA, Local)</li>
+										<li class="mb-2">Vector Databases</li>
+										<li class="mb-2">Embeddings</li>
+										<li class="mb-2">RAG Pipelines</li>
+									</ul>
+								</div>
+								<!--//item-->
+								<div class="item">
+									<h4 class="item-title">Cloud & DevOps</h4>
+									<ul class="list-unstyled resume-skills-list">
 										<li class="mb-2">Amazon AWS</li>
 										<li class="mb-2">Google Cloud</li>
+										<li class="mb-2">Docker</li>
+										<li class="mb-2">Kubernetes</li>
+										<li class="mb-2">CI/CD</li>
+										<li class="mb-2">Git</li>
+										<li class="mb-2">Agile</li>
+									</ul>
+								</div>
+								<!--//item-->
+								<div class="item">
+									<h4 class="item-title">Mobile</h4>
+									<ul class="list-unstyled resume-skills-list">
+										<li class="mb-2">Android Development</li>
 									</ul>
 								</div>
 								<!--//item-->
