@@ -19,6 +19,27 @@
 	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
 	
+	<style>
+		/* Typing animation for tagline */
+		.typing-animation {
+			overflow: hidden;
+			border-right: 2px solid #af799c;
+			white-space: nowrap;
+			margin: 0 auto;
+			animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
+		}
+		
+		@keyframes typing {
+			from { width: 0 }
+			to { width: 100% }
+		}
+		
+		@keyframes blink-caret {
+			from, to { border-color: transparent }
+			50% { border-color: #af799c }
+		}
+	</style>
+	
 	<script>
 		// Anti-scraping protection for contact info and download button
 		function revealContact() {
@@ -61,7 +82,7 @@
 					<div class="row align-items-center">
 						<div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
 							<h2 class="resume-name mb-0 text-uppercase">Lindita Kalaj</h2>
-							<div class="resume-tagline mb-3 mb-md-0">Software Engineer</div>
+							<div class="resume-tagline mb-3 mb-md-0 typing-animation">Software Engineer</div>
 						</div>
 						<!--//resume-title-->
 						<div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
@@ -265,6 +286,17 @@ people.
 						<!--//resume-main-->
 						<aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
 							<section class="skills-section py-3">
+								<h3 class="text-uppercase resume-section-heading mb-4">Social</h3>
+								<div class="item">
+									<a class="btn btn-primary me-2 mb-3" href="https://github.com/linditakalaj">
+										<i class="fab fa-github-square me-2"></i>GitHub
+									</a>
+									<a class="btn btn-primary me-2 mb-3" href="https://www.linkedin.com/in/lindita-kalaj/">
+										<i class="fab fa-linkedin me-2"></i>LinkedIn
+									</a>
+									<br /><br />
+								</div>
+								<!--//item-->
 								<h3 class="text-uppercase resume-section-heading mb-4">Resume</h3>
 								<div class="item">
 									<a class="btn btn-primary me-2 mb-3" href="#" id="resume-download"><svg
