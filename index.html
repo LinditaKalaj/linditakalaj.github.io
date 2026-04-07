@@ -7,7 +7,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
-	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- Google Fonts -->
@@ -40,38 +39,6 @@
 		}
 	</style>
 	
-	<script>
-		// Anti-scraping protection for contact info and download button
-		function revealContact() {
-			// Decode phone number
-			const phoneEl = document.getElementById('phone-link');
-			if (phoneEl) {
-				const phone = '718' + '-576' + '-5282';
-				phoneEl.href = 'tel:1' + phone.replace(/-/g, '');
-				phoneEl.textContent = phone;
-			}
-			
-			// Decode email
-			const emailEl = document.getElementById('email-link');
-			if (emailEl) {
-				const user = 'lindita' + 'kalaj';
-				const domain = 'gmail' + '.' + 'com';
-				const email = user + '@' + domain;
-				emailEl.href = 'mailto:' + email;
-				emailEl.textContent = email;
-			}
-			
-			// Decode resume download link
-			const resumeEl = document.getElementById('resume-download');
-			if (resumeEl) {
-				const path = 'assets' + '/' + 'resume' + '/' + 'Lindita Kalaj - Resume.pdf';
-				resumeEl.href = path;
-			}
-		}
-		
-		// Reveal contact info when page loads
-		document.addEventListener('DOMContentLoaded', revealContact);
-	</script>
 </head>
 <body>
 	<div class="main-wrapper">
@@ -87,12 +54,9 @@
 						<!--//resume-title-->
 						<div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
 							<ul class="list-unstyled mb-0">
-								<li class="mb-2"><i class="fas fa-phone-square fa-fw fa-lg me-2 "></i><a
-										class="resume-link" href="#" id="phone-link">Click to reveal</a></li>
-								<li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg me-2"></i><a
-										class="resume-link" href="#" id="email-link">Click to reveal</a></li>
-								<!-- <li class="mb-2"><i class="fas fa-globe fa-fw fa-lg me-2"></i><a class="resume-link" href="#">linditakalaj.com</a></li> -->
-								<li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>New York, NY</li>
+								<li class="mb-2"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>New York, NY</li>
+								<li class="mb-2"><i class="fab fa-github-square fa-fw fa-lg me-2"></i><a class="resume-link" href="https://github.com/linditakalaj">github.com/linditakalaj</a></li>
+								<li class="mb-2"><i class="fab fa-linkedin fa-fw fa-lg me-2"></i><a class="resume-link" href="https://www.linkedin.com/in/lindita-kalaj/">linkedin.com/in/lindita-kalaj</a></li>
 							</ul>
 						</div>
 						<!--//resume-contact-->
@@ -285,22 +249,11 @@ people.
 						</div>
 						<!--//resume-main-->
 						<aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
-							<section class="skills-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Social</h3>
-								<div class="item">
-									<a class="btn btn-primary me-2 mb-3" href="https://github.com/linditakalaj">
-										<i class="fab fa-github-square me-2"></i>GitHub
-									</a>
-									<a class="btn btn-primary me-2 mb-3" href="https://www.linkedin.com/in/lindita-kalaj/">
-										<i class="fab fa-linkedin me-2"></i>LinkedIn
-									</a>
-									<br /><br />
-								</div>
-								<!--//item-->
+						<section class="skills-section py-3">
 								<h3 class="text-uppercase resume-section-heading mb-4">Resume</h3>
 								<div class="item">
-									<a class="btn btn-primary me-2 mb-3" href="#" id="resume-download"><svg
-											class="svg-inline--fa fa-file-lines me-2" aria-hidden="true"
+									<a class="btn btn-primary me-2 mb-3" href="assets/resume/Lindita Kalaj - Resume.pdf" id="resume-download" download>
+										<svg class="svg-inline--fa fa-file-lines me-2" aria-hidden="true"
 											focusable="false" data-prefix="fas" data-icon="file-lines" role="img"
 											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
 											<path fill="currentColor"
@@ -321,6 +274,7 @@ people.
 										<li class="mb-2">Lisp</li>
 										<li class="mb-2">Bash</li>
 										<li class="mb-2">REST APIs</li>
+										<li class="mb-2">Node.js</li>
 									</ul>
 								</div>
 								<!--//item-->
@@ -343,14 +297,16 @@ people.
 										<li class="mb-2">MySQL</li>
 										<li class="mb-2">SQLite</li>
 										<li class="mb-2">OpenSearch</li>
+										<li class="mb-2">MongoDB</li>
 									</ul>
 								</div>
 								<!--//item-->
 								<div class="item">
 									<h4 class="item-title">Frontend</h4>
 									<ul class="list-unstyled resume-skills-list">
-										<li class="mb-2">HTML/CSS</li>
+										<li class="mb-2">HTML5/CSS</li>
 										<li class="mb-2">JavaScript</li>
+										<li class="mb-2">React</li>
 									</ul>
 								</div>
 								<!--//item-->
@@ -431,7 +387,7 @@ people.
 					<!--//row-->
 				</div>
 				<!--//resume-body-->
-				<hr>
+				<!-- <hr>
 				<div class="resume-footer text-center">
 					<ul class="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted">
 						<li class="list-inline-item mb-lg-0 me-3"><a class="resume-link"
@@ -445,20 +401,11 @@ people.
 						</li>
 						<!-- <li class="list-inline-item mb-lg-0 me-lg-3"><a class="resume-link" href="https://linditakalaj.com/"><i class="fas fa-globe fa-2x me-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">linditakalaj.com</span></a></li> -->
 					</ul>
-				</div>
-				<!--//resume-footer-->
+				</div> -->
 			</article>
 
 		</div>
 		<!--//container-->
-
-		<footer class="footer text-center py-4">
-			<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-			<small class="copyright text-muted">Designed with <span class="sr-only">love</span><i
-					class="fas fa-heart"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com"
-					target="_blank">Xiaoying Riley</a> for developers</small>
-		</footer>
-
 	</div>
 	<!--//main-wrapper-->
 </body>
