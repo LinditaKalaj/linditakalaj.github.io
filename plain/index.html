@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lindita Kalaj &middot; Software Engineer</title>
+	<meta name="description" content="Lindita Kalaj, software engineer in New York. Backend systems and LLM automation in Python and TypeScript.">
+	<link rel="canonical" href="https://linditakalaj.com/">
+	<link rel="icon" href="../favicon.ico">
+	<style>
+		:root {
+			--bg: #ffffff;
+			--fg: #1a1a1a;
+			--muted: #5c5c5c;
+			--rule: #e2e2e2;
+			--link: #a8235c;
+		}
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bg: #161616;
+				--fg: #e8e8e8;
+				--muted: #a0a0a0;
+				--rule: #333333;
+				--link: #ff8fbf;
+			}
+		}
+
+		body {
+			background: var(--bg);
+			color: var(--fg);
+			font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+			max-width: 40rem;
+			margin: 0 auto;
+			padding: 3rem 1.25rem 4rem;
+		}
+
+		a { color: var(--link); }
+		h1, h2 { line-height: 1.25; }
+		h1 { font-size: 1.75rem; margin: 0 0 .25rem; }
+		h2 {
+			font-size: 1rem;
+			text-transform: uppercase;
+			letter-spacing: .07em;
+			margin: 2.5rem 0 1rem;
+			padding-bottom: .4rem;
+			border-bottom: 1px solid var(--rule);
+		}
+		p { margin: 0 0 1rem; }
+
+		.role { color: var(--muted); margin: 0; }
+
+		.links { margin: 1.5rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; }
+
+		.job { margin-bottom: 1.5rem; }
+		.job h3 { font-size: 1rem; margin: 0; font-weight: 600; }
+		.job .meta { color: var(--muted); font-size: .9rem; margin: .1rem 0 .35rem; }
+		.job ul { margin: 0; padding-left: 1.2rem; }
+		.job li { margin-bottom: .35rem; }
+
+		dl { margin: 0; }
+		dt { font-weight: 600; margin-top: .6rem; }
+		dd { margin: 0; }
+
+		footer {
+			margin-top: 3rem;
+			padding-top: 1rem;
+			border-top: 1px solid var(--rule);
+			color: var(--muted);
+			font-size: .9rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: .5rem 1rem;
+		}
+		footer p { margin: 0; }
+		.counter { font-variant-numeric: tabular-nums; letter-spacing: .1em; }
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Lindita Kalaj</h1>
+	<p class="role">Software Engineer, AI &amp; Backend &middot; New York, NY</p>
+</header>
+
+<ul class="links">
+	<li><a href="mailto:linditakalaj@gmail.com">linditakalaj@gmail.com</a></li>
+	<li><a href="https://github.com/LinditaKalaj">GitHub</a></li>
+	<li><a href="https://www.linkedin.com/in/lindita-kalaj/">LinkedIn</a></li>
+	<li><a href="../assets/resume/Lindita_Kalaj_Resume.pdf" download="Lindita_Kalaj_Resume.pdf">Resume.pdf</a></li>
+</ul>
+
+<h2>About</h2>
+<p>
+	Software engineer with three years of experience building backend systems and LLM automation in Python and
+	TypeScript/Node.js. Most recently built a newsletter platform that researches, writes, and sends itself daily
+	with no human in the loop, currently 1,100 subscribers. Prior work includes a Whisper/Llama transcription
+	pipeline, a RAG system over OpenSearch, and a computer-vision agent for device automation.
+</p>
+
+<h2>Experience</h2>
+
+<div class="job">
+	<h3>Software Engineer &mdash; SyndicateBox</h3>
+	<p class="meta">April 2026 &ndash; Present</p>
+	<ul>
+		<li>Built the newsletter platform in Next.js, TypeScript, Node.js, and Postgres/Drizzle. One codebase serves multiple regions. The largest has 1,100 subscribers at a 65% open rate.</li>
+		<li>Wrote the automated content pipeline, from web search for local sources through drafting with Sonnet 4.6 to delivery, with schema validation and automatic retries on malformed model output.</li>
+		<li>Shipped a self-serve ad portal on Stripe where advertisers buy placements directly. An LLM step matches each ad to the most relevant section of the next issue and inserts it automatically.</li>
+	</ul>
+</div>
+
+<div class="job">
+	<h3>Software Engineer (Contract) &mdash; Kinary, Inc.</h3>
+	<p class="meta">April 2025 &ndash; February 2026</p>
+	<ul>
+		<li>Built a real-time transcription prototype for 60 minute meetings using Whisper and Llama 3 with token chunking and speaker diarization, reaching 95% transcription accuracy in QA comparisons.</li>
+		<li>Prototyped a headless browser agent (Puppeteer/Selenium) that joins scheduled Google Meets in under 30 seconds, identifies active speakers, and records audio for downstream transcription.</li>
+		<li>Prototyped a RAG system over thousands of documents using OpenAI embeddings and OpenSearch vector indexes, retrieving relevant passages at query time to build LLM context.</li>
+	</ul>
+</div>
+
+<div class="job">
+	<h3>Backend Python Developer &mdash; eDigital</h3>
+	<p class="meta">June 2023 &ndash; February 2025</p>
+	<ul>
+		<li>Trained a YOLO-based screen detection model that identifies on-screen UI elements, automating data retrieval from devices so results stayed current without manual checks.</li>
+		<li>Built an autonomous agent that drives HDMI devices through multi-screen UI flows using YOLO for perception, adapting to content that changed daily without handwritten scripts.</li>
+		<li>Developed and maintained a custom Selenium-based library wrapper to streamline data scraping from streaming platforms, reducing client data retrieval time by 80%.</li>
+	</ul>
+</div>
+
+<div class="job">
+	<h3>Mentor &mdash; Girls Who Code</h3>
+	<p class="meta">January 2021 &ndash; May 2022</p>
+	<ul>
+		<li>Mentored 10 students one-on-one on debugging and problem solving.</li>
+	</ul>
+</div>
+
+<h2>Projects</h2>
+
+<div class="job">
+	<h3><a href="https://play.google.com/store/apps/details?id=com.mimo.splitcheck">Split Check</a></h3>
+	<p class="meta">Android &middot; Java, ML Kit, SQLite</p>
+	<ul>
+		<li>Splits a restaurant bill by item from a photo of the receipt, pairing each line with its price and keeping a history of past bills.</li>
+	</ul>
+</div>
+
+<div class="job">
+	<h3><a href="https://github.com/LinditaKalaj/Clippy-Desktop-Pet">Clippy Desktop Pet</a></h3>
+	<p class="meta">Python &middot; PyQt6, OpenAI API</p>
+	<ul>
+		<li>A desktop Clippy that answers questions, with state-driven animation between sleep and awake poses.</li>
+	</ul>
+</div>
+
+<div class="job">
+	<h3><a href="https://github.com/LinditaKalaj/Vector-Remote-Control">Vector Remote Control</a></h3>
+	<p class="meta">Python &middot; Tkinter, Vector SDK, OpenAI API</p>
+	<ul>
+		<li>A GUI for driving the Vector robot's movement, speech, and live camera feed.</li>
+	</ul>
+</div>
+
+<h2>Skills</h2>
+<dl>
+	<dt>AI / Agents</dt><dd>Anthropic API, OpenAI API, Gemini, Llama, function calling / tool use, autonomous agents, RAG, embeddings, vector databases, prompt engineering, LangChain, Ollama</dd>
+	<dt>Languages</dt><dd>Python, TypeScript, JavaScript, Java, HTML/CSS, Bash</dd>
+	<dt>Frontend / Backend</dt><dd>React, Next.js, Node.js, REST APIs</dd>
+	<dt>Automation</dt><dd>Puppeteer, Selenium, YOLO</dd>
+	<dt>Databases</dt><dd>PostgreSQL, Drizzle, MySQL, MongoDB, SQLite, OpenSearch</dd>
+	<dt>Cloud / DevOps</dt><dd>AWS, Docker, Kubernetes, CI/CD, Git</dd>
+</dl>
+
+<h2>Education</h2>
+<div class="job">
+	<h3>B.A. Computer Science &mdash; CUNY Queens College</h3>
+	<p class="meta">September 2022 &middot; Dean's List &middot; GPA 3.83</p>
+</div>
+
+<footer>
+	<p>inspired by low poly education software &middot; <a href="../index.html">pixel version</a></p>
+	<p id="hits" hidden>you are visitor no. <span class="counter">000000</span></p>
+</footer>
+
+<script>
+	fetch("https://abacus.jasoncameron.dev/hit/linditakalaj.com/visits")
+		.then(function (r) { return r.json(); })
+		.then(function (d) {
+			var box = document.getElementById("hits");
+			box.querySelector(".counter").textContent = String(d.value).padStart(6, "0");
+			box.hidden = false;
+		})
+		.catch(function () {});
+</script>
+
+</body>
+</html>
